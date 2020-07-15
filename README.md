@@ -1,6 +1,6 @@
 # Felinos
 
-It's an small project about 😺!
+It's an small project about 😺 !
 
 ![](felinos.gif)
 
