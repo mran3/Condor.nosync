@@ -50,15 +50,17 @@ class JSONParser {
         }.resume()
     }
     
-    
     func fetchImage(from urlString: String, completion: @escaping (_ image: UIImage?, _ error: Error?) -> ()) {
-          guard let url = URL(string: urlString) else {
-                print("Error: Cannot create URL from string")
-                return
-          }
+        guard let url = URL(string: urlString) else {
+              print("Error: Cannot create URL from string")
+              return
+        }
+        return self.fetchImage(from: url, completion: completion)
+    }
+    
+    func fetchImage(from url:URL, completion: @escaping (_ image: UIImage?, _ error: Error?) -> ()) {          
    
         if let cachedImage = imageCache.object(forKey: url.absoluteString as NSString) {
-        
                 completion(cachedImage, nil)
             
         } else {

@@ -16,7 +16,9 @@ class DetailBreedPresenter {
     func getBreedDetail(from breedID: String?) {
         let jsonURL = apiConfig.fetchURL(with: .images, parameters: [apiConfig.breed_ids: breedID!])
         
-        jsonParser.downloadData(of: BreedDetail.self, from: jsonURL!) { (result) in
+        jsonParser.downloadData(of: BreedDetail.self, from: jsonURL!) {[weak self] (result) in
+            guard let self = self else { return }
+
             switch result {
             case .failure(let error):
                 if error is DataError {

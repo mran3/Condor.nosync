@@ -17,7 +17,10 @@ class ListBreedsPresenter {
     func getBreeds() {
         let jsonURL = apiConfig.fetchURL(with: .breeds, parameters: ["x_api_key" : apiConfig.apiKey])
       
-        jsonParser.downloadData(of: Breed.self, from: jsonURL!) { (result) in
+        jsonParser.downloadData(of: Breed.self, from: jsonURL!) { [weak self] (result)
+            in
+            guard let self = self else { return }
+
                switch result {
                case .failure(let error):
                    if error is DataError {

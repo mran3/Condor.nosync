@@ -14,8 +14,9 @@ class LikeViewController: UIViewController {
     
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    
     @IBOutlet weak var myKolodaView: KolodaView!
+    private let jsonParser = JSONParser()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,22 +29,32 @@ class LikeViewController: UIViewController {
     
     func hideIndicator(){
         DispatchQueue.main.async {
-          self.activityIndicator.isHidden = true
+            self.activityIndicator.isHidden = true
         }
     }
     
     func downloadImgsFromURLs(){
         for url in presenter.cardImagesURLs {
-            DispatchQueue.main.async {
+            
+            
+            self.jsonParser.fetchImage(from: url, completion: { [weak self] (imageData, error) in
+                guard let self = self else {
+                    print("Failed self unwrapping")
+                    return
+                }
                 
-                UIImage().load(url: url, success: {image in
-                    self.images.append(image)
+                if let data = imageData {
+                    self.images.append(data)
                     if url == self.presenter.cardImagesURLs.last {
-                        self.myKolodaView.reloadData()
-                        self.hideIndicator()
+                        DispatchQueue.main.async {
+                            self.myKolodaView.reloadData()
+                            self.hideIndicator()
+                        }
                     }
-                })
-            }
+                } else {
+                    print("Error loading image - Like")
+                }
+            })
         }
         
     }
@@ -109,5 +120,5 @@ extension LikeViewController: KolodaViewDataSource {
         return imageView
     }
     
-
+    
 }

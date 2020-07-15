@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C1CF30E24BC05CA00BAD373 /* UIImage+FromURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1CF30D24BC05CA00BAD373 /* UIImage+FromURL.swift */; };
 		0CBFA57A24BC3EB50077E332 /* LikeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBFA57924BC3EB50077E332 /* LikeViewController.swift */; };
 		0CBFA58124BC498D0077E332 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBFA58024BC498D0077E332 /* UserDefaults.swift */; };
 		0CBFA58324BC59AD0077E332 /* LikePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBFA58224BC59AD0077E332 /* LikePresenter.swift */; };
@@ -27,12 +26,10 @@
 		8A1BCC09245F67C400AB1E0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A1BCC07245F67C400AB1E0B /* LaunchScreen.storyboard */; };
 		8A317F0D24631ADE009E2B23 /* BreedsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A317F0C24631ADE009E2B23 /* BreedsTableViewController.swift */; };
 		8A317F0F24631BC1009E2B23 /* DetailBreedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A317F0E24631BC1009E2B23 /* DetailBreedViewController.swift */; };
-		8A3CB4CF246DED5200D01B2C /* UIImage_Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3CB4CE246DED5200D01B2C /* UIImage_Cache.swift */; };
 		8A9BDCE62470911F003B9A96 /* BreedDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9BDCE52470911F003B9A96 /* BreedDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0C1CF30D24BC05CA00BAD373 /* UIImage+FromURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+FromURL.swift"; sourceTree = "<group>"; };
 		0CBFA57924BC3EB50077E332 /* LikeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LikeViewController.swift; path = Felinos/Scenes/Liking/View/LikeViewController.swift; sourceTree = SOURCE_ROOT; };
 		0CBFA58024BC498D0077E332 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		0CBFA58224BC59AD0077E332 /* LikePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikePresenter.swift; sourceTree = "<group>"; };
@@ -55,7 +52,6 @@
 		8A1BCC0A245F67C400AB1E0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = CatAPIViewer/Resources/Info.plist; sourceTree = SOURCE_ROOT; };
 		8A317F0C24631ADE009E2B23 /* BreedsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsTableViewController.swift; sourceTree = "<group>"; };
 		8A317F0E24631BC1009E2B23 /* DetailBreedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBreedViewController.swift; sourceTree = "<group>"; };
-		8A3CB4CE246DED5200D01B2C /* UIImage_Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage_Cache.swift; sourceTree = "<group>"; };
 		8A9BDCE52470911F003B9A96 /* BreedDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetail.swift; sourceTree = "<group>"; };
 		D57982D9B605E16BAA78A105 /* Pods-Felinos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Felinos.debug.xcconfig"; path = "Target Support Files/Pods-Felinos/Pods-Felinos.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -197,7 +193,6 @@
 		8A12C0C9246EB6FD00316518 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				0C1CF30D24BC05CA00BAD373 /* UIImage+FromURL.swift */,
 				0CBFA58024BC498D0077E332 /* UserDefaults.swift */,
 			);
 			path = Extensions;
@@ -267,7 +262,6 @@
 		8A3CB4CB246DECE700D01B2C /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				8A3CB4CE246DED5200D01B2C /* UIImage_Cache.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -400,8 +394,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A1BCBFD245F67C300AB1E0B /* AppDelegate.swift in Sources */,
-				8A3CB4CF246DED5200D01B2C /* UIImage_Cache.swift in Sources */,
-				0C1CF30E24BC05CA00BAD373 /* UIImage+FromURL.swift in Sources */,
 				8A12C0CF246EB98600316518 /* ImageCAT.swift in Sources */,
 				8A1BCBFF245F67C300AB1E0B /* SceneDelegate.swift in Sources */,
 				8A317F0D24631ADE009E2B23 /* BreedsTableViewController.swift in Sources */,

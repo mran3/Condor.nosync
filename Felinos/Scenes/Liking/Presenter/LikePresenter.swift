@@ -19,7 +19,8 @@ class LikePresenter {
             ["x_api_key" : apiConfig.apiKey,
              "limit" : "10"])
         
-        jsonParser.downloadData(of: ImageCAT.self, from: jsonURL!) { (result) in
+        jsonParser.downloadData(of: ImageCAT.self, from: jsonURL!) {[weak self] (result) in
+            guard let self = self else { return }
             switch result {
             case .failure(let error):
                 if error is DataError {
